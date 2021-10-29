@@ -5,7 +5,7 @@ import Destance from "./Destance";
 const Destination = () => {
   const [destinations, setDestinations] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/destination")
+    fetch("https://warm-cove-96847.herokuapp.com/destination")
       .then((res) => res.json())
       .then((data) => {
         setDestinations(data);

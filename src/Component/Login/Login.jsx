@@ -19,8 +19,7 @@ const Login = () => {
   const {
     SignInWithGoogle,
     setIsLoading,
-    logInWithPassword,
-    SignInWithFacebook,
+    logInWithPassword
   } = useAuth();
   const location = useLocation();
   const history = useHistory();
@@ -29,16 +28,6 @@ const Login = () => {
   // handle Google Login Function
   const handleGoogleLogin = () => {
     SignInWithGoogle()
-      .then((result) => {
-        history.push(redirect_uri);
-      })
-      .finally(() => {
-        setIsLoading(false);
-      });
-  };
-  // handle Google Login Function
-  const handleFacebookLogin = () => {
-    SignInWithFacebook()
       .then((result) => {
         history.push(redirect_uri);
       })
@@ -120,15 +109,6 @@ const Login = () => {
                     className='btn btn-google btn-login text-uppercase fw-bold'
                     type='submit'>
                     <i className='fab fa-google me-2'></i> Sign in with Google
-                  </button>
-                </div>
-                <div className='d-grid'>
-                  <button
-                    onClick={handleFacebookLogin}
-                    className='btn btn-facebook btn-login text-uppercase fw-bold'
-                    type='submit'>
-                    <i className='fab fa-facebook-f me-2'></i> Sign in with
-                    Facebook
                   </button>
                 </div>
                 <p className='regular-text mt-3'>
