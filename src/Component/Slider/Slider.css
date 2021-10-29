@@ -1,0 +1,23 @@
+.Slider {
+  color: white;
+}
+carousel {
+    height: 600px;
+}
+.carousel-caption {
+  z-index: 10;
+  text-align: left;
+  top: 30%;
+  left: auto;
+  right: auto;
+  bottom: auto;
+}
+.slider-title {
+  font-size: 68px;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+.slider-text {
+  font-size: 14px;
+  font-family: Cabin;
+}

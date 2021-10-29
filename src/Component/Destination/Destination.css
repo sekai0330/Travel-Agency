@@ -1,0 +1,29 @@
+.destination-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.destination-title:hover {
+    color: #0e8e4c;
+}
+.destination-text {
+  font-size: 18px;
+  color: rgb(111, 111, 111);
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+.destination-price,
+.destination-detail {
+  text-align: center;
+  background-color: #21ab64;
+  color: white;
+  border: 0;
+  padding-top: 11px;
+  padding-bottom: 11px;
+}
+.destination-detail {
+  background-color: #0e8e4c;
+}
