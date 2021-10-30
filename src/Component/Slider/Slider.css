@@ -1,12 +1,13 @@
 .Slider {
   color: white;
+  text-align: center;
 }
 carousel {
     height: 600px;
 }
 .carousel-caption {
   z-index: 10;
-  text-align: left;
+  text-align: center;
   top: 30%;
   left: auto;
   right: auto;
