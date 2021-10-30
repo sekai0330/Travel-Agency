@@ -1,5 +1,6 @@
 import React from "react";
-import { Card, Col, Button } from "react-bootstrap";
+import { Button, Card, Col } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const Package = ({ pack }) => {
   return (
@@ -9,15 +10,17 @@ const Package = ({ pack }) => {
         <Card.Body>
           <Card.Title className='package-title'>{pack.title}</Card.Title>
           <p className='place-name'>{pack.place}</p>
-          <p className="package-description">{pack.description}</p>
+          <p className='package-description'>{pack.description}</p>
         </Card.Body>
         <Card.Footer style={{ backgroundColor: "white" }}>
           <p>
-            <i class='fas fa-calendar-alt'></i> {pack.time}
+            <i className='fas fa-calendar-alt'></i> {pack.time}
           </p>
           <div className='d-flex justify-content-between'>
             <p className='package-price'>${pack.price}</p>
-            <Button variant='success'>BOOKING NOW</Button>
+            <Link to={`/booking/${pack._id}`}>
+              <Button variant='success'>BOOKING NOW</Button>
+            </Link>
           </div>
         </Card.Footer>
       </Card>

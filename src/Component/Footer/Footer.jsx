@@ -16,7 +16,7 @@ function Footer() {
               day before or the day of the appointment.
             </p>
             <Link to='/service'>
-              <button className='btn-regular px-3'>Get Service</button>
+              <button className='btn btn-success px-3 mt-md-4'>Get Service</button>
             </Link>
           </Col>
           <Col sm={12} md={3}>

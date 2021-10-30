@@ -14,7 +14,7 @@ const Destance = ({ city }) => {
         <div className='d-flex'>
           <button className='w-50 destination-price'>$ {city.price}</button>
           <button className='w-50 destination-detail'>
-            <i class='fas fa-info-circle'></i> See Details
+            <i className='fas fa-info-circle'></i> See Details
           </button>
         </div>
       </Card>

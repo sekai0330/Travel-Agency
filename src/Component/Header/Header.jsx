@@ -34,7 +34,7 @@ const Header = () => {
               
               {!user.email ? (
                 <Nav.Link as={Link} to='/login'>
-                  <Button className='btn-regular'>Sign in</Button>
+                  <Button className='btn btn-success'>Sign in</Button>
                 </Nav.Link>
               ) : (
                 <NavDropdown
@@ -70,7 +70,7 @@ const Header = () => {
                       </p>
                       <Link
                         to='/profile'
-                        className='btn btn-regular py-1 px-2 rounded-pill '>
+                        className='btn btn-success py-1 px-2 rounded-pill '>
                         <i className='far fa-user-circle'></i> View Profile
                       </Link>
                     </div>
