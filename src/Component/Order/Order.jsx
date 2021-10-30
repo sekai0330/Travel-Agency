@@ -1,35 +1,65 @@
 import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
-import { Col, Container, Row } from "react-bootstrap";
+import { Col, Container, Row, Spinner } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import { useParams } from "react-router";
 import useAuth from "../../Hooks/useAuth";
 import "./Order.css";
 
 const Order = () => {
+  //  import user and useparams id
   const { user } = useAuth();
   const { id } = useParams();
+
+  //   fetch singlePackage from API and set
   const [singlePackage, setSinglePackage] = useState({});
   useEffect(() => {
-    fetch(`http://localhost:5000/package/${id}`)
+    fetch(`https://warm-cove-96847.herokuapp.com/package/${id}`)
       .then((response) => response.json())
       .then((data) => setSinglePackage(data));
-  }, []);
+  });
 
   //   Use form hooks function
+  //   const [bookUser, setBookUser] = useState({});
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = (data) => {
-    console.log(data);
-    reset({
-      Name: "",
-      Email: "",
-    });
+    // setBookUser(data);
+
+    //  if user booking is valid then
+    if (!data.Name) {
+      return (
+        <Spinner className='mx-auto' animation='border' variant='danger' />
+      );
+    } else {
+      // set singlePackage in bookUser
+      data.packag = singlePackage;
+
+      //   fetch the post API
+      fetch("https://warm-cove-96847.herokuapp.com/users", {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(data),
+      })
+        .then((res) => res.json())
+        .then((result) => {
+          if (result.insertedId) {
+            alert("Successfully added the user.");
+            reset({
+              Name: "",
+              Email: "",
+            });
+          }
+        });
+    }
+    // console.log(bookUser);
   };
   return (
     <Container className='my-md-5 my-3'>
       <div className='order-form mx-auto'>
-          <p className="regular-title mb-md-5 mb-3">Complete Your Booking</p>
+        <p className='regular-title mb-md-5 mb-3'>Complete Your Booking</p>
         <Row className='single-package-card g-4'>
           <Col sm={4} md={4}>
             <img src={singlePackage.img} alt='' className='img-fluid' />
@@ -95,7 +125,11 @@ const Order = () => {
             </select>
             <label htmlFor='floatingSelectGrid'>Gander</label>
           </div>
-          <input className='btn btn-success px-3' type='submit' value='BOOKING NOW' />
+          <input
+            className='btn btn-success px-3'
+            type='submit'
+            value='BOOKING NOW'
+          />
         </form>
       </div>
     </Container>

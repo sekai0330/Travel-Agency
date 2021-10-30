@@ -9,48 +9,46 @@ function Footer() {
       <Container>
         <Row>
           <Col sm={12} md={3}>
-            <p className='footer-title'>About Clinic</p>
+            <p className='footer-title'>ABOUT US</p>
             <p className='footer-text'>
-              The cosgrove staff members are well trained professionals, We will
-              fax the requested records directly to the qualified doctors the
-              day before or the day of the appointment.
+            We are Travel Industry experts agency that have developed a solution based on World Wide Dynamics Travels, with added travel-specific functionality to support travel agents in their daily tasks and empower their entire team.
             </p>
             <Link to='/service'>
-              <button className='btn btn-success px-3 mt-md-4'>Get Service</button>
+              <button className='btn btn-success px-3 mt-md-4'>BROWS PACKAGES</button>
             </Link>
           </Col>
           <Col sm={12} md={3}>
-            <p className='footer-title'>Departments</p>
+            <p className='footer-title'>MEET TRIPAR</p>
             <div className='footer-list'>
-              <Link to='/'>Pediatric</Link>
-              <Link to='/'>Cardiology</Link>
-              <Link to='/'>Neurology</Link>
-              <Link to='/'>Dentel Care</Link>
-              <Link to='/'>Urology</Link>
+              <Link to='/'>Career</Link>
+              <Link to='/'>About Travel</Link>
+              <Link to='/'>FAQ</Link>
+              <Link to='/'>Contact us</Link>
+              <Link to='/'>Privacy Policy</Link>
               <Link to='/'>Pulmonary</Link>
-              <Link to='/'>Х-ray & CT Scan</Link>
+              <Link to='/'>Customer Portal</Link>
             </div>
           </Col>
           <Col sm={12} md={3}>
-            <p className='footer-title'>Latest News & Tips</p>
+            <p className='footer-title'>NEWS & TIPS</p>
             <p className='footer-text'>
-              <Link to='/'>Cancer treatment for poor peoples </Link>
-              <p>02th Dec 2017</p>
+              <Link to='/'>INCREASE CUSTOMER RETENTION</Link>
+              <p>02th Dec 2021</p>
             </p>
             <hr />
             <p className='footer-text'>
               <Link to='/'>Hospitality Managements </Link>
-              <p>03th Dec 2017</p>
+              <p>03th Dec 2021</p>
             </p>
             <hr />
             <p className='footer-text'>
-              <Link to='/'>Disease based on junk foods</Link>
-              <p>03th Dec 2017</p>
+              <Link to='/'>Weekdays in South America</Link>
+              <p>03th Dec 2021</p>
             </p>
             <hr />
           </Col>
           <Col sm={12} md={3}>
-            <p className='footer-title'>Contact Details</p>
+            <p className='footer-title'>CONTACT INFO</p>
             <p className='footer-text'>
               250 Main Street, Brooklyn, NY 52143, US
             </p>
@@ -64,7 +62,7 @@ function Footer() {
             </p>
             <p className='footer-text'>
               <i className='fas fa-globe-asia'></i>
-              Website <span className='number'> medical.com</span>
+              Website <span className='number'> tripar.com</span>
             </p>
             <p className='footer-direction mx-4'>
               Get Map Direction <i className='fas fa-long-arrow-alt-right'></i>

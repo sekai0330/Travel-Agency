@@ -5,13 +5,17 @@ import useAuth from "../../Hooks/useAuth";
 import "./Header.css";
 
 const Header = () => {
-  const {user, LogOut} = useAuth()
+  const { user, LogOut } = useAuth();
   return (
     <div className='header sticky-top shadow-lg'>
       <Navbar className='' collapseOnSelect expand='lg' variant='light'>
         <Container>
           <Navbar.Brand as={Link} to='/'>
-            <img className='logo' src='https://i.ibb.co/f881qkN/logo.png' alt='' />
+            <img
+              className='logo'
+              src='https://i.ibb.co/f881qkN/logo.png'
+              alt=''
+            />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls='responsive-navbar-nav' />
           <Navbar.Collapse className='bg-navbar' id='responsive-navbar-nav'>
@@ -31,7 +35,7 @@ const Header = () => {
               <Nav.Link as={Link} to='/about'>
                 ABOUT US
               </Nav.Link>
-              
+
               {!user.email ? (
                 <Nav.Link as={Link} to='/login'>
                   <Button className='btn btn-success'>Sign in</Button>
@@ -77,8 +81,8 @@ const Header = () => {
                     <hr />
                     <div className='profile-info-body'>
                       <p>
-                        <Link to='/'>
-                          <i className='fas fa-bookmark'></i> Bookmarks
+                        <Link to='/mybooking'>
+                          <i className='fas fa-bookmark'></i> My Booking
                         </Link>
                       </p>
                       <p>
