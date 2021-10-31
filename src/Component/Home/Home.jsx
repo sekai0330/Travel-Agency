@@ -2,6 +2,7 @@ import React from "react";
 import Support from "../Contact/Support";
 import Destination from "../Destination/Destination";
 import Discount from "../Discount/Discount";
+import Galarry from "../Gallary/Gallary";
 import Packages from "../Packages/Packages";
 import Slider from "../Slider/Slider";
 
@@ -13,6 +14,7 @@ const Home = () => {
       <Discount />
       <Packages />
       <Support />
+      <Galarry />
     </div>
   );
 };

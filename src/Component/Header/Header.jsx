@@ -20,8 +20,8 @@ const Header = () => {
           <Navbar.Toggle aria-controls='responsive-navbar-nav' />
           <Navbar.Collapse className='bg-navbar' id='responsive-navbar-nav'>
             <Nav className='mx-auto nav-bar'>
-              <Nav.Link as={Link} to='/doctor'>
-                BLOG
+              <Nav.Link as={Link} to='/gallery'>
+                GALLERY
               </Nav.Link>
               <Nav.Link as={Link} to='/packages'>
                 PACKAGES
@@ -87,12 +87,14 @@ const Header = () => {
                       </p>
                       <p>
                         <Link to='/allbooking'>
-                          <i className='fas hico fa-bookmark'></i> Manage All Booking
+                          <i className='fas hico fa-bookmark'></i> Manage All
+                          Booking
                         </Link>
                       </p>
                       <p>
                         <Link to='/addpackage'>
-                          <i className='fas hico fa-bookmark'></i> Add New Package
+                          <i className='fas hico fa-bookmark'></i> Add New
+                          Package
                         </Link>
                       </p>
                       <p>

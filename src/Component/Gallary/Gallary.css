@@ -1,0 +1,9 @@
+.galary {
+    overflow: hidden;
+  }
+  .galary-img:hover {
+    transform: scale(130%);
+  }
+  .galary-img {
+      transition: transform 1s ease;
+  }

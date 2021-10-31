@@ -16,6 +16,7 @@ import Contact from './Component/Contact/Contact';
 import AllBooking from './Component/AllBooking/AllBooking';
 import AddPackage from './Component/AddPackage/AddPackage';
 import NotFound from './Component/NotFound/NotFound';
+import Gallary from './Component/Gallary/Gallary';
 
 function App() {
   const { packages } = usePackages();
@@ -61,6 +62,9 @@ function App() {
             </Route>
             <Route exact path="/destination">
               <Destination />
+            </Route>
+            <Route exact path="/gallery">
+              <Gallary />
             </Route>
             <PrivateRoute path="/booking/:id">
               <Order></Order>
