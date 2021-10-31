@@ -3,6 +3,8 @@ import { Container, Row } from "react-bootstrap";
 import Loader from "react-loader-spinner";
 import SingleBooking from "../MyBooking/SingleBooking";
 
+
+
 const AllBooking = () => {
   const [allBooking, setAllBooking] = useState([]);
 
@@ -11,7 +13,7 @@ const AllBooking = () => {
     fetch("https://warm-cove-96847.herokuapp.com/allbooking")
       .then((res) => res.json())
       .then((data) => setAllBooking(data));
-  }, []);
+  });
 
   // spinner add before page loading
   if (!allBooking.length) {

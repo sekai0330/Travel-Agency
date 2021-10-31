@@ -1,7 +1,8 @@
 import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
-import { Container, Row, Spinner } from "react-bootstrap";
+import { Container, Row } from "react-bootstrap";
+import Loader from "react-loader-spinner";
 import useAuth from "../../Hooks/useAuth";
 import SingleBooking from "./SingleBooking";
 
@@ -18,8 +19,8 @@ const MyBooking = () => {
   });
   if (!mybooking.length) {
     return (
-      <div className='text-center'>
-        <Spinner className='mx-auto' animation='border' variant='danger' />
+      <div className='text-center my-md-5 my-3'>
+        <Loader type='Oval' color='#00BFFF' height={80} width={80} />
       </div>
     );
   }
