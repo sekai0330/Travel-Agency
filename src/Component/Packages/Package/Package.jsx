@@ -14,7 +14,7 @@ const Package = ({ pack }) => {
         </Card.Body>
         <Card.Footer style={{ backgroundColor: "white" }}>
           <p>
-            <i className='fas fa-calendar-alt'></i> {pack.time}
+            <i className='fas fa-calendar-alt ico'></i> {pack.time}
           </p>
           <div className='d-flex justify-content-between'>
             <p className='package-price'>${pack.price}</p>

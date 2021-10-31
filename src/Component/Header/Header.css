@@ -4,7 +4,7 @@
   background-color: antiquewhite;
 }
 .logo {
-    width: 180px;
+  width: 180px;
 }
 .nav-bar {
   font-size: 18px;
@@ -16,8 +16,8 @@
 }
 
 .dashboard-box {
-  padding: 10px 7px;
-  width: 200px;
+  padding: 10px;
+  width: 250px;
 }
 .profile-img {
   width: 40px;
@@ -35,4 +35,7 @@
 .profile-info-body a {
   text-decoration: none;
   color: #22343d;
+}
+.hico {
+  color: #0e8e4c;
 }

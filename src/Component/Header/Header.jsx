@@ -23,10 +23,10 @@ const Header = () => {
               <Nav.Link as={Link} to='/doctor'>
                 BLOG
               </Nav.Link>
-              <Nav.Link as={Link} to='/news'>
-                SERVICES
+              <Nav.Link as={Link} to='/packages'>
+                PACKAGES
               </Nav.Link>
-              <Nav.Link as={Link} to='/galary'>
+              <Nav.Link as={Link} to='/destination'>
                 DESTINATION
               </Nav.Link>
               <Nav.Link as={Link} to='/contact'>
@@ -82,12 +82,22 @@ const Header = () => {
                     <div className='profile-info-body'>
                       <p>
                         <Link to='/mybooking'>
-                          <i className='fas fa-bookmark'></i> My Booking
+                          <i className='fas hico fa-bookmark'></i> My Booking
+                        </Link>
+                      </p>
+                      <p>
+                        <Link to='/allbooking'>
+                          <i className='fas hico fa-bookmark'></i> Manage All Booking
+                        </Link>
+                      </p>
+                      <p>
+                        <Link to='/'>
+                          <i className='fas hico fa-bookmark'></i> Add New Package
                         </Link>
                       </p>
                       <p>
                         <Link to='/' onClick={LogOut}>
-                          <i className='fas fa-sign-out-alt'></i> Logout
+                          <i className='fas hico fa-sign-out-alt'></i> Logout
                         </Link>
                       </p>
                     </div>

@@ -7,7 +7,7 @@ function Footer() {
   return (
     <div className='pb-md-5 py-3 footer-area'>
       <Container>
-        <Row>
+        <Row className='g-4'>
           <Col sm={12} md={3}>
             <p className='footer-title'>ABOUT US</p>
             <p className='footer-text'>
@@ -53,19 +53,19 @@ function Footer() {
               250 Main Street, Brooklyn, NY 52143, US
             </p>
             <p className='footer-text'>
-              <i className='fas fa-phone-alt'></i>
+              <i className='fas fa-phone-alt ico'></i>
               Tell <span className='number'>(800)-456-789</span>
             </p>
             <p className='footer-text'>
-              <i className='fas fa-envelope'></i>
+              <i className='fas fa-envelope ico'></i>
               Email <span className='number'> info@example.com</span>
             </p>
             <p className='footer-text'>
-              <i className='fas fa-globe-asia'></i>
+              <i className='fas fa-globe-asia ico'></i>
               Website <span className='number'> tripar.com</span>
             </p>
             <p className='footer-direction mx-4'>
-              Get Map Direction <i className='fas fa-long-arrow-alt-right'></i>
+              Get Map Direction <i className='fas fa-long-arrow-alt-right ico'></i>
             </p>
           </Col>
         </Row>

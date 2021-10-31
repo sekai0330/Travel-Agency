@@ -1,4 +1,5 @@
 import React from "react";
+import Support from "../Contact/Support";
 import Destination from "../Destination/Destination";
 import Discount from "../Discount/Discount";
 import Packages from "../Packages/Packages";
@@ -11,6 +12,7 @@ const Home = () => {
       <Destination />
       <Discount />
       <Packages />
+      <Support />
     </div>
   );
 };

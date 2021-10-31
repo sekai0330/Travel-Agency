@@ -24,7 +24,7 @@ const MyBooking = () => {
   return (
     <Container className='my-md-5 my-3'>
       <Row className='g-4'>
-        {mybooking.map((booking) => <SingleBooking booking={booking.packag} key={booking._id} id={booking._id} />)}
+        {mybooking.map((booking) => <SingleBooking booking={booking.packag} key={booking._id} fullBooking={booking} />)}
       </Row>
     </Container>
   );
