@@ -11,17 +11,19 @@
   border: 0;
   padding: 7px 15px;
   transition: 0.4s;
-  border-radius: 20px;
+  border-radius: 10px;
   color: #fff;
-  background-color: #1e5bdf;
+  background-color: #00c760;
   box-shadow: 0 0 0 0.1rem rgba(60, 127, 153, 0.5);
 }
 .btn-regular::content {
   text-shadow: 0 0 0.1rem rgb(0, 10, 14);
 }
 .btn-regular:hover {
-  background-color: #3978ff;
+  background-color: #21ab64;
 }
+
+/* Css for regular title, subtitle, and text*/
 .regular-subtitle {
   font-size: 16px;
   font-weight: 500;

@@ -6,9 +6,11 @@ import useAuth from "../../Hooks/useAuth";
 import SingleBooking from "./SingleBooking";
 
 const MyBooking = () => {
+  // import user from useAuth 
   const { user } = useAuth();
   const [mybooking, setMyBooking] = useState([]);
 
+  // Load data from database by email
   useEffect(() => {
     fetch(`https://warm-cove-96847.herokuapp.com/booking/?email=${user.email}`)
       .then((res) => res.json())

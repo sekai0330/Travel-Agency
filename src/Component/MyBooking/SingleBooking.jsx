@@ -4,8 +4,11 @@ import useAuth from "../../Hooks/useAuth";
 import "./SingleBooking.css";
 
 const SingleBooking = ({ booking, fullBooking }) => {
+  // import user from useAuth
   const { user } = useAuth();
   const id = fullBooking._id;
+
+  // Delete booking function
   const deleteBooking = (id) => {
     const procced = window.confirm("Are you sure you want to Delete ?");
     if (procced) {
@@ -21,6 +24,7 @@ const SingleBooking = ({ booking, fullBooking }) => {
     }
   };
 
+  // Change status and update data from database function
   const changeStatus = () => {
     fullBooking.status = "approved";
     const url = `https://warm-cove-96847.herokuapp.com/booking/${id}`;
@@ -32,6 +36,8 @@ const SingleBooking = ({ booking, fullBooking }) => {
       body: JSON.stringify(fullBooking),
     }).then();
   };
+
+  // return single booking component
   return (
     <Col sm={12} md={4}>
       <Card style={{ width: "22rem" }}>

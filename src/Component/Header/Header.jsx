@@ -5,6 +5,7 @@ import useAuth from "../../Hooks/useAuth";
 import "./Header.css";
 
 const Header = () => {
+  // import user and logout from useAuth
   const { user, LogOut } = useAuth();
   return (
     <div className='header sticky-top shadow-lg'>
@@ -36,6 +37,7 @@ const Header = () => {
                 ABOUT US
               </Nav.Link>
 
+            {/* user login manage menu here */}
               {!user.email ? (
                 <Nav.Link as={Link} to='/login'>
                   <Button className='btn btn-success'>Sign in</Button>

@@ -17,8 +17,10 @@ import AllBooking from './Component/AllBooking/AllBooking';
 import AddPackage from './Component/AddPackage/AddPackage';
 import NotFound from './Component/NotFound/NotFound';
 import Gallary from './Component/Gallary/Gallary';
+import About from './Component/About/About';
 
 function App() {
+  // Use spinner before loading
   const { packages } = usePackages();
   if (!packages.length) {
     return (<div className="text-center mt-5">
@@ -30,6 +32,8 @@ function App() {
       />
     </div>)
   }
+
+  // Return App Component with AuthProvider and Router
   return (
     <div className="App">
       <AuthProvider>
@@ -59,6 +63,9 @@ function App() {
             </Route>
             <Route exact path="/packages">
               <Packages></Packages>
+            </Route>
+            <Route exact path="/about">
+              <About />
             </Route>
             <Route exact path="/destination">
               <Destination />

@@ -7,6 +7,8 @@ import Packages from "../Packages/Packages";
 import Slider from "../Slider/Slider";
 
 const Home = () => {
+
+  // All home component add here
   return (
     <div>
       <Slider />

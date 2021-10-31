@@ -4,6 +4,8 @@ import Destance from "./Destance";
 
 const Destination = () => {
   const [destinations, setDestinations] = useState([]);
+
+  // Load destinations data from the database
   useEffect(() => {
     fetch("https://warm-cove-96847.herokuapp.com/destination")
       .then((res) => res.json())
@@ -11,6 +13,8 @@ const Destination = () => {
         setDestinations(data);
       });
   }, []);
+
+  // return all destinations from here
   return (
     <div className='my-md-5 my-3'>
       <Container>

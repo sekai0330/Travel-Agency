@@ -3,6 +3,8 @@ import { Carousel } from "react-bootstrap";
 import "./Slider.css";
 
 function Slider() {
+
+  // return home page slide here
   return (
     <div className='Slider'>
       <Carousel className='text-left carousel'>

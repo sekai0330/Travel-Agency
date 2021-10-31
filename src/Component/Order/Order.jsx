@@ -56,10 +56,13 @@ const Order = () => {
     }
     // console.log(bookUser);
   };
+
+  // Send Order post to MONGODB
   return (
     <Container className='my-md-5 my-3'>
       <div className='order-form mx-auto'>
         <p className='regular-title mb-md-5 mb-3'>Complete Your Booking</p>
+        
         <Row className='single-package-card g-4'>
           <Col sm={4} md={4}>
             <img src={singlePackage.img} alt='' className='img-fluid' />

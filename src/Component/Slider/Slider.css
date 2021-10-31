@@ -5,6 +5,8 @@
 carousel {
   height: 600px;
 }
+
+/* Css for slider caption and title */
 .carousel-caption {
   z-index: 10;
   text-align: center;
@@ -14,7 +16,7 @@ carousel {
   bottom: auto;
 }
 .slider-title {
-  font-size: 36px;
+  font-size: 30px;
   font-weight: 400;
   margin-bottom: 30px;
 }

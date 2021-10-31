@@ -1,0 +1,35 @@
+/* Css style for AboutCompany components */
+.about-company {
+  text-align: left;
+  margin-top: 60px;
+}
+.description {
+  padding: 40px;
+}
+.company-text {
+  font-size: 16px;
+  color: #757783;
+}
+.fa-check-circle {
+  color: #198754;
+  font-weight: 900;
+}
+.sub {
+  color: #198754;
+  font-size: 24px;
+  font-weight: 500;
+}
+.company-title {
+  color: #1c1e27;
+  font-size: 40px;
+  font-weight: bold;
+}
+.btn-company {
+  background-color: #4d5fe3;
+  color: azure;
+  border-radius: 10px;
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 10px 20px;
+}

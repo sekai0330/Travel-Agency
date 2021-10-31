@@ -3,6 +3,8 @@ import { Card, Col } from "react-bootstrap";
 import "./Destination.css";
 
 const Destance = ({ city }) => {
+  
+  // return every single destination from here
   return (
     <Col sm={12} md={4}>
       <Card style={{ width: "22rem" }}>

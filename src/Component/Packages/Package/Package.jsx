@@ -3,6 +3,7 @@ import { Button, Card, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 const Package = ({ pack }) => {
+  //  import package as pack from packages component
   return (
     <Col sm={12} md={4}>
       <Card style={{ width: "22rem" }}>

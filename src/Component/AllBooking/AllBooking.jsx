@@ -5,11 +5,15 @@ import SingleBooking from "../MyBooking/SingleBooking";
 
 const AllBooking = () => {
   const [allBooking, setAllBooking] = useState([]);
+
+  // Load all bookings data from the database
   useEffect(() => {
     fetch("https://warm-cove-96847.herokuapp.com/allbooking")
       .then((res) => res.json())
       .then((data) => setAllBooking(data));
   }, []);
+
+  // spinner add before page loading
   if (!allBooking.length) {
     return (
       <div className='text-center my-md-5 my-3'>
@@ -17,6 +21,8 @@ const AllBooking = () => {
       </div>
     );
   }
+
+  // return all booking data
   return (
     <Container className='my-md-5 my-3'>
       <p className='regular-title'>All Booked Package</p>
