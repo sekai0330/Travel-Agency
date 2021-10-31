@@ -21,7 +21,6 @@ const Order = () => {
   });
 
   //   Use form hooks function
-  //   const [bookUser, setBookUser] = useState({});
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = (data) => {
     // setBookUser(data);
@@ -32,7 +31,8 @@ const Order = () => {
         <Spinner className='mx-auto' animation='border' variant='danger' />
       );
     } else {
-      // set singlePackage in bookUser
+      // set singlePackage in data
+      data.status = "pending";
       data.packag = singlePackage;
 
       //   fetch the post API
@@ -48,8 +48,8 @@ const Order = () => {
           if (result.insertedId) {
             alert("Successfully added the Package");
             reset({
-              Name: "",
-              Email: "",
+              Name: " ",
+              Email: " ",
             });
           }
         });

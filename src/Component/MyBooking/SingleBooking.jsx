@@ -20,6 +20,18 @@ const SingleBooking = ({ booking, fullBooking }) => {
         });
     }
   };
+
+  const changeStatus = () => {
+    fullBooking.status = "approved";
+    const url = `https://warm-cove-96847.herokuapp.com/booking/${id}`;
+    fetch(url, {
+      method: "PUT",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(fullBooking),
+    }).then();
+  };
   return (
     <Col sm={12} md={4}>
       <Card style={{ width: "22rem" }}>
@@ -27,7 +39,23 @@ const SingleBooking = ({ booking, fullBooking }) => {
         <Card.Body>
           <p className='booking-title'>{booking.title}</p>
           <p className='place-name'>{booking.place}</p>
+          <hr />
           <p className='booking-description'>{fullBooking.Name}</p>
+
+          {fullBooking.status === "pending" ? (
+            <div className='d-flex justify-content-between pending-status'>
+              <p>
+                <i class='fas fa-cog'></i> {fullBooking.status}
+              </p>
+              <button onClick={changeStatus} className='btn btn-success'>
+                Approved
+              </button>
+            </div>
+          ) : (
+            <p className='approved-status'>
+              <i class='far fa-check-circle'></i> {fullBooking.status}
+            </p>
+          )}
         </Card.Body>
         <Card.Footer style={{ backgroundColor: "white" }}>
           <p>

@@ -17,4 +17,14 @@
   color: #21ab64;
   margin-bottom: 0;
 }
-
+.pending-status {
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.approved-status {
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #21ab64;
+}

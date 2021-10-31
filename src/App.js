@@ -15,6 +15,7 @@ import usePackages from './Hooks/usePackages';
 import Contact from './Component/Contact/Contact';
 import AllBooking from './Component/AllBooking/AllBooking';
 import AddPackage from './Component/AddPackage/AddPackage';
+import NotFound from './Component/NotFound/NotFound';
 
 function App() {
   const { packages } = usePackages();
@@ -64,6 +65,9 @@ function App() {
             <PrivateRoute path="/booking/:id">
               <Order></Order>
             </PrivateRoute>
+            <Route path="*">
+              <NotFound />
+            </Route>
           </Switch>
           <Footer></Footer>
         </Router>
