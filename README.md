@@ -6,8 +6,6 @@ Since tourism is one of the most significant industries in the World, I try to m
 The customer can sign in/sign up with Google for the tour packages. Customers can book easily through the site. And there are other features such as customers can check their Tour Booking, and many more. And They can Create, Manage Packages, Manage bookings. The design is pretty simple and the user won’t find it difficult to understand, use and navigate.
 
 ## 🏆 Features :
-<br/> <br/>
-
 📘 Login/Register System With Google <br/>
 📘 Private Route <br/>
 📘 Manage, Create Packages <br/>
@@ -16,7 +14,6 @@ The customer can sign in/sign up with Google for the tour packages. Customers ca
 
 
 ## 🏆 Languages/Frameworks Used:
-<br/><br/>
 🍧 REACT JS <br/>
 🍧 NODE JS <br/>
 🍧 HTML <br/>
