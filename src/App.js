@@ -14,6 +14,7 @@ import Packages from './Component/Packages/Packages';
 import usePackages from './Hooks/usePackages';
 import Contact from './Component/Contact/Contact';
 import AllBooking from './Component/AllBooking/AllBooking';
+import AddPackage from './Component/AddPackage/AddPackage';
 
 function App() {
   const { packages } = usePackages();
@@ -38,6 +39,9 @@ function App() {
             </Route>
             <Route exact path="/home">
               <Home />
+            </Route>
+            <Route exact path="/addpackage">
+              <AddPackage />
             </Route>
             <Route exact path="/contact">
               <Contact />

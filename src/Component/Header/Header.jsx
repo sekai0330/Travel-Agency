@@ -91,7 +91,7 @@ const Header = () => {
                         </Link>
                       </p>
                       <p>
-                        <Link to='/'>
+                        <Link to='/addpackage'>
                           <i className='fas hico fa-bookmark'></i> Add New Package
                         </Link>
                       </p>

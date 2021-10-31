@@ -46,7 +46,7 @@ const Order = () => {
         .then((res) => res.json())
         .then((result) => {
           if (result.insertedId) {
-            alert("Successfully added the user.");
+            alert("Successfully added the Package");
             reset({
               Name: "",
               Email: "",
