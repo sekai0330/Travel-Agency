@@ -12,14 +12,14 @@ const About = () => {
       <p className='regular-title'>About Us</p>
       <Container>
       <Row className='g-4 mb-4'>
-        <Col sm={12} md={6}>
+        <Col xs={12} md={6}>
           <img
             className='img-fluid'
             src='https://i.ibb.co/9hbvtFV/1.png'
             alt=''
           />
         </Col>
-        <Col sm={12} md={6} className='description ps-md-5'>
+        <Col xs={12} md={6} className='description ps-md-5'>
           <p className='sub'>WE ARE MANALI</p>
           <div className='company-text'>
             <p className='regular-sub'>

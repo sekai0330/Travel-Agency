@@ -8,7 +8,7 @@ function Footer() {
     <div className='pb-md-5 py-3 footer-area'>
       <Container>
         <Row className='g-4'>
-          <Col sm={12} md={3}>
+          <Col xs={12} md={3}>
             <p className='footer-title'>ABOUT US</p>
             <p className='footer-text'>
             We are Travel Industry experts agency that have developed a solution based on World Wide Dynamics Travels, with added travel-specific functionality to support travel agents in their daily tasks and empower their entire team.
@@ -17,7 +17,7 @@ function Footer() {
               <button className='btn btn-success px-3 mt-md-4'>BROWS PACKAGES</button>
             </Link>
           </Col>
-          <Col sm={12} md={3}>
+          <Col xs={12} md={3}>
             <p className='footer-title'>MEET TRIPAR</p>
             <div className='footer-list'>
               <Link to='/'>Career</Link>
@@ -29,7 +29,7 @@ function Footer() {
               <Link to='/'>Customer Portal</Link>
             </div>
           </Col>
-          <Col sm={12} md={3}>
+          <Col xs={12} md={3}>
             <p className='footer-title'>NEWS & TIPS</p>
             <p className='footer-text'>
               <Link to='/'>INCREASE CUSTOMER RETENTION</Link>
@@ -47,7 +47,7 @@ function Footer() {
             </p>
             <hr />
           </Col>
-          <Col sm={12} md={3}>
+          <Col xs={12} md={3}>
             <p className='footer-title'>CONTACT INFO</p>
             <p className='footer-text'>
               250 Main Street, Brooklyn, NY 52143, US

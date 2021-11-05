@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Col, Button } from "react-bootstrap";
+import { Button, Card, Col } from "react-bootstrap";
 import useAuth from "../../Hooks/useAuth";
 import "./SingleBooking.css";
 
@@ -39,7 +39,7 @@ const SingleBooking = ({ booking, fullBooking }) => {
 
   // return single booking component
   return (
-    <Col sm={12} md={4}>
+    <Col xs={12} md={4}>
       <Card style={{ width: "22rem" }}>
         <Card.Img variant='top' src={booking.img} height='220px' />
         <Card.Body>

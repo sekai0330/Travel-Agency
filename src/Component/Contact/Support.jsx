@@ -6,14 +6,14 @@ const Support = () => {
   return (
     <Container className='my-md-5 my-3'>
       <Row>
-        <Col sm={12} md={6}>
+        <Col xs={12} md={6}>
           <img
             src='https://i.ibb.co/r68GWkp/5138237-2.jpg'
             alt=''
             className='img-fluid'
           />
         </Col>
-        <Col sm={12} md={6}>
+        <Col xs={12} md={6}>
           <p className='support-title'>Customer Support</p>
           <p className='support-sub'>
             We want our customers to be 100% satisfied
