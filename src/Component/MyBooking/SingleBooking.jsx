@@ -12,7 +12,7 @@ const SingleBooking = ({ booking, fullBooking }) => {
   const deleteBooking = (id) => {
     const procced = window.confirm("Are you sure you want to Delete ?");
     if (procced) {
-      fetch(`https://warm-cove-96847.herokuapp.com/booking/${id}`, {
+      fetch(`http://warm-cove-96847.herokuapp.com/booking/${id}`, {
         method: "DELETE",
       })
         .then((response) => response.json())
