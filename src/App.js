@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import './App.css';
 import AuthProvider from './AuthContext/AuthProvider';
 import Destination from './Component/Destination/Destination';
-import Footer from './Component/Footer/Footer';
 import Header from './Component/Header/Header';
 import Home from './Component/Home/Home';
 import Login from './Component/Login/Login';
@@ -18,6 +17,8 @@ import AddPackage from './Component/AddPackage/AddPackage';
 import NotFound from './Component/NotFound/NotFound';
 import Gallary from './Component/Gallary/Gallary';
 import About from './Component/About/About';
+import Registration from './Component/Registration/Registration';
+import Footer from './Component/Footer/Footer';
 
 function App() {
   // Use spinner before loading
@@ -54,6 +55,9 @@ function App() {
             </Route>
             <Route exact path="/login">
               <Login></Login>
+            </Route>
+            <Route exact path="/registration">
+              <Registration />
             </Route>
             <Route exact path="/mybooking">
               <MyBooking></MyBooking>

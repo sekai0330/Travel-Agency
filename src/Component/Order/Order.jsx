@@ -1,4 +1,5 @@
 import React from "react";
+import Alert from "@mui/material/Alert";
 import { useState } from "react";
 import { useEffect } from "react";
 import { Col, Container, Row, Spinner } from "react-bootstrap";
@@ -8,6 +9,7 @@ import useAuth from "../../Hooks/useAuth";
 import "./Order.css";
 
 const Order = () => {
+  const [bookingSuccess, setBookingSuccess] = useState(false);
   //  import user and useparams id
   const { user } = useAuth();
   const { id } = useParams();
@@ -46,15 +48,10 @@ const Order = () => {
         .then((res) => res.json())
         .then((result) => {
           if (result.insertedId) {
-            alert("Successfully added the Package");
-            reset({
-              Name: " ",
-              Email: " ",
-            });
+            setBookingSuccess(true);
           }
         });
     }
-    // console.log(bookUser);
   };
 
   // Send Order post to MONGODB
@@ -62,7 +59,7 @@ const Order = () => {
     <Container className='my-md-5 my-3'>
       <div className='order-form mx-auto'>
         <p className='regular-title mb-md-5 mb-3'>Complete Your Booking</p>
-        
+
         <Row className='single-package-card g-4'>
           <Col sm={4} md={4}>
             <img src={singlePackage.img} alt='' className='img-fluid' />
@@ -76,64 +73,68 @@ const Order = () => {
           </Col>
         </Row>
 
-        <form onSubmit={handleSubmit(onSubmit)}>
-          <div className='form-floating mb-3'>
-            <input
-              type='text'
-              className='form-control'
-              id='floatingInput'
-              value={user.displayName}
-              {...register("Name")}
-              required
-            />
-            <label htmlFor='floatingInput'>Name</label>
-          </div>
+        {bookingSuccess ? (
+          <Alert severity='success'>Booking Added Successfully!</Alert>
+        ) : (
+          <form onSubmit={handleSubmit(onSubmit)}>
+            <div className='form-floating mb-3'>
+              <input
+                type='text'
+                className='form-control'
+                id='floatingInput'
+                value={user.displayName}
+                {...register("Name")}
+                required
+              />
+              <label htmlFor='floatingInput'>Name</label>
+            </div>
 
-          <div className='form-floating mb-3'>
+            <div className='form-floating mb-3'>
+              <input
+                type='email'
+                value={user.email}
+                className='form-control'
+                id='floatingInput'
+                {...register("Email")}
+                required
+              />
+              <label htmlFor='floatingInput'>Email</label>
+            </div>
+            <div className='form-floating mb-3'>
+              <input
+                type='number'
+                className='form-control'
+                id='floatingInput'
+                {...register("Phone")}
+                required
+              />
+              <label htmlFor='floatingInput'>Phone Number</label>
+            </div>
+            <div className='form-floating mb-3'>
+              <input
+                type='text'
+                className='form-control'
+                id='floatingInput'
+                {...register("Address")}
+                required
+              />
+              <label htmlFor='floatingInput'>Address</label>
+            </div>
+            <div className='form-floating'>
+              <select className='form-select mb-3' {...register("gender")}>
+                <option value='male'>male</option>
+                <option value='female'>female</option>
+                <option value='other'>other</option>
+              </select>
+              <label htmlFor='floatingSelectGrid'>Gander</label>
+            </div>
             <input
-              type='email'
-              value={user.email}
-              className='form-control'
-              id='floatingInput'
-              {...register("Email")}
-              required
+              className='btn btn-success px-3'
+              type='submit'
+              value='BOOKING NOW'
             />
-            <label htmlFor='floatingInput'>Email</label>
-          </div>
-          <div className='form-floating mb-3'>
-            <input
-              type='number'
-              className='form-control'
-              id='floatingInput'
-              {...register("Phone")}
-              required
-            />
-            <label htmlFor='floatingInput'>Phone Number</label>
-          </div>
-          <div className='form-floating mb-3'>
-            <input
-              type='text'
-              className='form-control'
-              id='floatingInput'
-              {...register("Address")}
-              required
-            />
-            <label htmlFor='floatingInput'>Address</label>
-          </div>
-          <div className='form-floating'>
-            <select className='form-select mb-3' {...register("gender")}>
-              <option value='male'>male</option>
-              <option value='female'>female</option>
-              <option value='other'>other</option>
-            </select>
-            <label htmlFor='floatingSelectGrid'>Gander</label>
-          </div>
-          <input
-            className='btn btn-success px-3'
-            type='submit'
-            value='BOOKING NOW'
-          />
-        </form>
+          </form>
+        )}
       </div>
     </Container>
   );
