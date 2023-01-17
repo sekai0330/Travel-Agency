@@ -7,7 +7,7 @@ const Destination = () => {
 
   // Load destinations data from the database
   useEffect(() => {
-    fetch("https://warm-cove-96847.herokuapp.com/destination")
+    fetch("https://travel-agency-server-seven.vercel.app/destination")
       .then((res) => res.json())
       .then((data) => {
         setDestinations(data);

@@ -1,6 +1,7 @@
 .discount-banner {
   height: 564px;
   position: relative;
+  width: 100%;
 }
 .discount-banner::before {
   content: "";

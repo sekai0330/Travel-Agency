@@ -10,7 +10,7 @@ const AllBooking = () => {
 
   // Load all bookings data from the database
   useEffect(() => {
-    fetch("https://warm-cove-96847.herokuapp.com/allbooking")
+    fetch("https://travel-agency-server-seven.vercel.app/allbooking")
       .then((res) => res.json())
       .then((data) => setAllBooking(data));
   });

@@ -1,11 +1,6 @@
-import {
-    getAuth, GoogleAuthProvider, onAuthStateChanged, createUserWithEmailAndPassword, signInWithPopup, signOut, signInWithEmailAndPassword, updateProfile
-} from "firebase/auth";
+import { createUserWithEmailAndPassword, getAuth, GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
 import { useEffect, useState } from "react";
 import initializAuthentication from "../Firebase/firebase.init";
-
-
-
 
 initializAuthentication();
 
@@ -86,7 +81,7 @@ const UseFirebase = () => {
             setIsLoading(false);
         });
         return () => unsubscribed;
-    }, []);
+    }, [auth]);
 
     // Create Logout function
     const LogOut = () => {

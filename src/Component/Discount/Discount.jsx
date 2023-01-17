@@ -3,7 +3,7 @@ import "./Discount.css";
 
 const Discount = () => {
   return (
-    <div className='discount-banner row'>
+    <div className='discount-banner row gx-0'>
       <div className='discount-info p-md-5 p-3 my-md-5 my-3 col-md-6 col-12'>
         <p className='discount-sub'>1000 $ for person - 6 nights</p>
         <p className='discount-title'>

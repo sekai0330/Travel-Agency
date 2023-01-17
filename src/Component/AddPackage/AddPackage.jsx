@@ -13,7 +13,7 @@ const AddPackage = () => {
       );
     } else {
       //   fetch the post API
-      fetch("https://warm-cove-96847.herokuapp.com/package", {
+      fetch("https://travel-agency-server-seven.vercel.app/package", {
         method: "POST",
         headers: {
           "content-type": "application/json",

@@ -11,7 +11,7 @@ const Packages = ({ quantity }) => {
     <Container className='my-md-5 my-3'>
       <h1 className='packages-title'>PACKAGES</h1>
       <p className='package-sub'>BEST TRAVEL PACKAGES</p>
-      <Row className='g-4'>
+      <Row className='g-2 g-sm-4'>
         {packages.slice(0, quantity).map((pack) => (
           <Package key={pack._id} pack={pack}></Package>
         ))}

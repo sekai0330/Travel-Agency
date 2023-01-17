@@ -27,7 +27,7 @@ const SingleBooking = ({ booking, fullBooking }) => {
   // Change status and update data from database function
   const changeStatus = () => {
     fullBooking.status = "approved";
-    const url = `https://warm-cove-96847.herokuapp.com/booking/${id}`;
+    const url = `https://travel-agency-server-seven.vercel.app/booking/${id}`;
     fetch(url, {
       method: "PUT",
       headers: {

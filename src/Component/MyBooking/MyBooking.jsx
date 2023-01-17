@@ -1,6 +1,4 @@
-import React from "react";
-import { useState } from "react";
-import { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Container, Row } from "react-bootstrap";
 import Loader from "react-loader-spinner";
 import useAuth from "../../Hooks/useAuth";
@@ -13,7 +11,7 @@ const MyBooking = () => {
 
   // Load data from database by email
   useEffect(() => {
-    fetch(`https://warm-cove-96847.herokuapp.com/booking/?email=${user.email}`)
+    fetch(`https://travel-agency-server-seven.vercel.app/booking/?email=${user.email}`)
       .then((res) => res.json())
       .then((data) => setMyBooking(data));
   });

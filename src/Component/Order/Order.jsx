@@ -1,7 +1,5 @@
-import React from "react";
 import Alert from "@mui/material/Alert";
-import { useState } from "react";
-import { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Col, Container, Row, Spinner } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import { useParams } from "react-router";
@@ -17,7 +15,7 @@ const Order = () => {
   //   fetch singlePackage from API and set
   const [singlePackage, setSinglePackage] = useState({});
   useEffect(() => {
-    fetch(`https://warm-cove-96847.herokuapp.com/package/${id}`)
+    fetch(`https://travel-agency-server-seven.vercel.app/package/${id}`)
       .then((response) => response.json())
       .then((data) => setSinglePackage(data));
   });
@@ -38,7 +36,7 @@ const Order = () => {
       data.packag = singlePackage;
 
       //   fetch the post API
-      fetch("https://warm-cove-96847.herokuapp.com/users", {
+      fetch("https://travel-agency-server-seven.vercel.app/users", {
         method: "POST",
         headers: {
           "content-type": "application/json",
